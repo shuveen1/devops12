@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: custom2aksnginxapp1
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80 
+    selector:
+        app: custom2aksnginxapp1
