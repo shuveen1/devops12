@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: custom2aksnginxapp1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom2aksnginxapp1
+  template:
+    metadata:
+      labels:
+        app: custom2aksnginxapp1 
+    spec:
+      containers:
+        - name: custom2aksnginxapp1 
+          image: ppsingh.azurecr.io/custom2aksnginxapp1
+          ports:
+          - containerPort: 80
